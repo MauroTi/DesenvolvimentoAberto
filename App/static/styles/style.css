@@ -60,6 +60,35 @@ form{
 	
 }
 
+#in_quantidades input {
+    width: 60px;
+    margin-top: 16px;
+}
+
+#nomes_lanches div {
+    margin-top: 30px;
+}
+
+#valores_lanches div {
+    margin-top: 30px;
+}
+
+#cardapio_escolha{
+	margin-top: 30px;
+}
+
+#cardapio_escolha div{
+	margin-top: 30px;
+}
+
+#cardapio_escolha_valores{
+	margin-top: 30px;
+}
+
+#cardapio_escolha_valores div{
+	margin-top: 30px;
+}
+
 body{
 	 background-image: url("/static/img/fundo.jpg");
 	 font-weight: 900;

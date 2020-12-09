@@ -10,7 +10,7 @@ from Cadastro import Cadastro
 app = Flask(__name__)
 
 
-cadastro_clientes = []
+clientes = []
 
 
 @app.route("/")
@@ -21,9 +21,9 @@ def index():
 def pedidos():
     return render_template('fila_pedidos.html')
 
-@app.route("/Cadastro")
+@app.route("/Cadastro_cliente")
 def cadastro_clientes():
-    return render_template('cadastro.html')
+    return render_template('cadastro_clientes.html')
 
 @app.route("/Cadastro_pedido")
 def cadastro_pedidos():
@@ -50,16 +50,37 @@ def salvar():
     nome = request. form['nome']
     endereco = request. form['endereco']
     cpf = request. form['cpf']
-    telefone = request. form["telefone"]
-    email = request. form["email"]
+    telefone = request. form['telefone']
+    email = request. form['email']
     cadastro = Cadastro(nome, endereco,cpf, telefone, email)
     
-    cadastro_clientes.append(cadastro)    
+    clientes.append(cadastro)    
     return redirect(url_for('index'))
 
- 
-if __name__ == "__main__":
-    app.run()
+
+@app.route('/entrar', methods=['POST',])
+def entrar():
+    return redirect(url_for('index'))
+
+@app.route('/salvar_pedidos', methods=['post',])
+def salvar_pedidos():
+        xsalada = request. form['xsalada']
+        xcalabresa = request. form['xcalabresa']
+       	xlombo = request. form['xlombo']
+       	xcoracao = request. form['xcoracao']
+       	hsimples = request. form['hsimples']
+       	hcasa = request. form['hcasa']
+       	csimples = request. form['csimples']
+       	ccasa = request. form['ccasa']
+       	fritasp = request. form['fritasp']
+       	fritasg = request. form['fritasg']
+       	refril = request. form['refril'] 
+       	refrig = request. form['refrig']
+    
+       
+        return redirect(url_for('index'))
+
+app.run()
 
 
 
