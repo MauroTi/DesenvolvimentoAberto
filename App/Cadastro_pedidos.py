@@ -6,9 +6,18 @@ Created on Wed Dec  9 09:04:25 2020
 """
 
 class Cadastro_pedidos:
-    def __init__(self, nome, endereco, cpf, telefone, email):
-        self.nome = nome
-        self.endereco = endereco
-        self.cpf = cpf
-        self.telefone = telefone
-        self.email = email
+    def __init__(self, xsalada, xgalinha, xcalabresa, xlombo,xcoracao, hsimples,hcasa, csimples, ccasa, fritasp, fritasg,refril, refrig):
+        self.xsalada = xsalada
+        self.xgalinha = xgalinha
+        self.xcalabresa = xcalabresa
+        self.xlombo = xlombo
+        self.xcoracao = xcoracao
+        self.hsimples = hsimples
+        self.hcasa = hcasa
+        self.csimples = csimples
+        self.ccasa = ccasa
+        self.fritasp = fritasp
+        self.fritasg = fritasg
+        self.refril = refril
+        self.refrig = refrig
+        

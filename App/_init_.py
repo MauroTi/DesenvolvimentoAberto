@@ -7,18 +7,20 @@ This is a temporary script file."""
 
 from flask import Flask, render_template, request, redirect, session, flash, url_for
 from Cadastro import Cadastro
+from Cadastro_pedidos import Cadastro_pedidos 
 app = Flask(__name__)
 
 
 clientes = []
+lista_pedidos = []
 
 
 @app.route("/")
 def index():
     return render_template('index.html')
 
-@app.route("/Acompanha_pedidos")
-def pedidos():
+@app.route("/fila_pedidos")
+def fila_pedidos():
     return render_template('fila_pedidos.html')
 
 @app.route("/Cadastro_cliente")
@@ -41,6 +43,10 @@ def login():
 def sobre():
     return render_template('sobre.html')
 
+@app.route("/lista")
+def lista():
+    return render_template('lista.html')
+
 
 
 
@@ -54,8 +60,9 @@ def salvar():
     email = request. form['email']
     cadastro = Cadastro(nome, endereco,cpf, telefone, email)
     
-    clientes.append(cadastro)    
-    return redirect(url_for('index'))
+    clientes.append(cadastro)      
+    return render_template('lista.html', listas=clientes)
+    #return redirect(url_for('index'))
 
 
 @app.route('/entrar', methods=['POST',])
@@ -65,6 +72,7 @@ def entrar():
 @app.route('/salvar_pedidos', methods=['post',])
 def salvar_pedidos():
         xsalada = request. form['xsalada']
+        xgalinha = request. form['xgalinha']
         xcalabresa = request. form['xcalabresa']
        	xlombo = request. form['xlombo']
        	xcoracao = request. form['xcoracao']
@@ -76,9 +84,14 @@ def salvar_pedidos():
        	fritasg = request. form['fritasg']
        	refril = request. form['refril'] 
        	refrig = request. form['refrig']
+        pedidos = Cadastro_pedidos(xsalada, xgalinha, xcalabresa, xlombo, xcoracao, hsimples, hcasa, csimples, ccasa, fritasp, fritasg, refril, refrig)
     
+        lista_pedidos.append(pedidos)
+        
        
-        return redirect(url_for('index'))
+        return redirect(url_for('fila_pedidos'))
+    
+
 
 app.run()
 

@@ -32,8 +32,9 @@
 		{% include 'cabecalho.html' %}
 	</div>
 
-
+<form action="{{ url_for('salvar_pedidos') }}" method="post">
 	<div class="form-group d-flex justify-content-center">
+		
 		<div class="col-sm-4">
 			
 		</div>
@@ -73,19 +74,19 @@
 		</div>
 
 		<div id="in_quantidades" class="col-sm-1 form-group" style="margin-top:10px;">
-			<div><input type="number" name="xsalada" class="form-control"></div>
-			<div><input type="number" name="xgalinha" class="form-control"></div>
-			<div><input type="number" name="xcalabresa" class="form-control"></div>
-			<div><input type="number" name="xlombo" class="form-control"></div>
-			<div><input type="number" name="xcoracao" class="form-control"></div>
-			<div><input type="number" name="hsimples" class="form-control"></div>
-			<div><input type="number" name="hcasa" class="form-control"></div>
-			<div><input type="number" name="csimples" class="form-control"></div>
-			<div><input type="number" name="ccasa" class="form-control"></div>
-			<div><input type="number" name="fritasp" class="form-control"></div>
-			<div><input type="number" name="fritasg" class="form-control"></div>
-			<div><input type="number" name="refril" class="form-control"></div>
-			<div><input type="number" name="refrig" class="form-control"></div>
+			<div><input type="number" id="xsalada" name="xsalada" class="form-control"></div>
+			<div><input type="number" id="xgalinha" name="xgalinha" class="form-control"></div>
+			<div><input type="number" id="xcalabresa "name="xcalabresa" class="form-control"></div>
+			<div><input type="number" id="xlombo" name="xlombo" class="form-control"></div>
+			<div><input type="number" id="xcoracao" name="xcoracao" class="form-control"></div>
+			<div><input type="number" id="hsimples" name="hsimples" class="form-control"></div>
+			<div><input type="number" id="hcasa" name="hcasa" class="form-control"></div>
+			<div><input type="number" id="csimples" name="csimples" class="form-control"></div>
+			<div><input type="number" id="ccasa" name="ccasa" class="form-control"></div>
+			<div><input type="number" id="fritasp" name="fritasp" class="form-control"></div>
+			<div><input type="number" id="fritasg" name="fritasg" class="form-control"></div>
+			<div><input type="number" id="refril" name="refril" class="form-control"></div>
+			<div><input type="number" id="refrig" name="refrig" class="form-control"></div>
 		</div>
 
 		<div class="col-sm-4">
@@ -98,90 +99,8 @@
 
 		</div>
 
-		<!--
-		<table>
-			<td>
-				<tr>Xis Salada</tr><tr>R$ 10,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Xis Galinha</tr><tr>R$ 11,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Xis Calabresa</tr><tr>R$ 12,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Xis Lombo</tr><tr>R$ 13,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Xis Coração</tr><tr>R$ 14,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Hamburguer Simples</tr><tr>R$ 15,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Hamburguer da Casa</tr><tr>R$ 16,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Cachorro Simples</tr><tr>R$ 10,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Cachorro Completo</tr><tr>R$ 15,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Fritas Pequena</tr><tr>R$ 10,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Fritas Grande</tr><tr>R$ 15,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Refrigerante Lata</tr><tr>R$ 5,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr>Refrigerante 600ml</tr><tr>R$ 7,00</tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr></tr><tr></tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr></tr><tr></tr>
-			</td>
-		</table>
-		<table>
-			<td>
-				<tr></tr><tr></tr>
-			</td>
-		</table>
-	-->
 </div>
-
+</form>
 
 
 
